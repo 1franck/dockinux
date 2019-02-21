@@ -1,0 +1,1 @@
+FROM photon:latest

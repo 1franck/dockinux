@@ -1,0 +1,102 @@
+version: '3.0'
+services:
+
+  alpine:
+    build:
+      context: .
+      dockerfile: alpine/latest/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/sh"]
+    working_dir: "/workingdir"
+
+  amazonlinux:
+    build:
+      context: .
+      dockerfile: amazonlinux/latest/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  centos:
+    build:
+      context: .
+      dockerfile: centos/latest/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  clearlinux:
+    build:
+      context: .
+      dockerfile: clearlinux/latest/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  crux:
+    build:
+      context: .
+      dockerfile: crux/latest/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  oraclelinux:
+    build:
+      context: .
+      dockerfile: oraclelinux/latest/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  photon:
+    build:
+      context: .
+      dockerfile: photon/latest/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  sl:
+    build:
+      context: .
+      dockerfile: sl/latest/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  sourcemage:
+    build:
+      context: .
+      dockerfile: sourcemage/latest/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  ubuntu:
+    build:
+      context: .
+      dockerfile: ubuntu/latest/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"

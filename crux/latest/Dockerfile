@@ -1,0 +1,1 @@
+FROM crux:latest
