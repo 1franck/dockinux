@@ -3,6 +3,10 @@
 - alpine
 - amazonlinux
 - centos
+    - edge
+    - latest
+    - 7
+    - 6
 - clearlinx
 - crux
 - fedora
@@ -11,6 +15,11 @@
 - sl
 - sourcemage
 - ubuntu
+    - edge
+    - latest
+    - cosmic
+    - trusty
+    - xenial
 
 ### How to use
 

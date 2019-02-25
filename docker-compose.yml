@@ -34,6 +34,39 @@ services:
     entrypoint: ["/bin/bash"]
     working_dir: "/workingdir"
 
+  centos-edge:
+    build:
+      context: .
+      dockerfile: centos/edge/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    stdin_open: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  centos6:
+    build:
+      context: .
+      dockerfile: centos/centos6/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    stdin_open: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  centos7:
+    build:
+      context: .
+      dockerfile: centos/centos7/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    stdin_open: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
   clearlinux:
     build:
       context: .
