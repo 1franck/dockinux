@@ -100,3 +100,13 @@ services:
     tty: true
     entrypoint: ["/bin/bash"]
     working_dir: "/workingdir"
+
+  ubuntu-edge:
+    build:
+      context: .
+      dockerfile: ubuntu/edge/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
