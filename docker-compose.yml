@@ -132,3 +132,25 @@ services:
     stdin_open: true
     entrypoint: ["/bin/bash"]
     working_dir: "/workingdir"
+
+  ubuntu-trusty:
+    build:
+      context: .
+      dockerfile: ubuntu/trusty/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    stdin_open: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
+
+  ubuntu-xenial:
+    build:
+      context: .
+      dockerfile: ubuntu/xenial/Dockerfile
+    volumes:
+      - .:/workingdir
+    tty: true
+    stdin_open: true
+    entrypoint: ["/bin/bash"]
+    working_dir: "/workingdir"
