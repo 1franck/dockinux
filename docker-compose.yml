@@ -1,7 +1,7 @@
 version: '3.0'
 services:
 
-  alpine:
+  alpine: &base
     build:
       context: .
       dockerfile: alpine/latest/Dockerfile
@@ -13,177 +13,97 @@ services:
     working_dir: "/workingdir"
 
   amazonlinux:
+    <<: *base
     build:
       context: .
       dockerfile: amazonlinux/latest/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   centos:
+    <<: *base
     build:
       context: .
       dockerfile: centos/latest/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   centos-edge:
+    <<: *base
     build:
       context: .
       dockerfile: centos/edge/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   centos6:
+    <<: *base
     build:
       context: .
       dockerfile: centos/centos6/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   centos7:
+    <<: *base
     build:
       context: .
       dockerfile: centos/centos7/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   clearlinux:
+    <<: *base
     build:
       context: .
       dockerfile: clearlinux/latest/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   crux:
+    <<: *base
     build:
       context: .
       dockerfile: crux/latest/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   oraclelinux:
+    <<: *base
     build:
       context: .
       dockerfile: oraclelinux/latest/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   photon:
+    <<: *base
     build:
       context: .
       dockerfile: photon/latest/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   sl:
+    <<: *base
     build:
       context: .
       dockerfile: sl/latest/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   sourcemage:
+    <<: *base
     build:
       context: .
       dockerfile: sourcemage/latest/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   ubuntu:
+    <<: *base
     build:
       context: .
       dockerfile: ubuntu/latest/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   ubuntu-cosmic:
+    <<: *base
     build:
       context: .
       dockerfile: ubuntu/cosmic/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   ubuntu-edge:
+    <<: *base
     build:
       context: .
       dockerfile: ubuntu/edge/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   ubuntu-trusty:
+    <<: *base
     build:
       context: .
       dockerfile: ubuntu/trusty/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
 
   ubuntu-xenial:
+    <<: *base
     build:
       context: .
       dockerfile: ubuntu/xenial/Dockerfile
-    volumes:
-      - .:/workingdir
-    tty: true
-    stdin_open: true
-    entrypoint: ["/bin/bash"]
-    working_dir: "/workingdir"
